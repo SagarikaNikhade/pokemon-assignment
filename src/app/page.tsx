@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Pokemon {
   name: string;
@@ -49,11 +50,18 @@ export default function Home() {
           return (
             <Link href={`/pokemon/${id}`} key={id}>
               <div className="bg-black rounded-lg shadow-md hover:shadow-lg transition-shadow p-4 text-center">
-                <img
+                {/* <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
                   alt={pokemon.name}
                   className="w-24 h-24 mx-auto mb-2"
-                />
+                /> */}
+                <Image 
+                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+                alt={pokemon.name} 
+                width={150} 
+                height={150}
+                className="w-24 h-24 mx-auto mb-2"
+                 />
                 <h2 className="text-xl font-bold capitalize">{pokemon.name}</h2>
               </div>
             </Link>
