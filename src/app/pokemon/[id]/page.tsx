@@ -70,7 +70,7 @@ const typeColors: Record<PokemonType, string> = {
 
 export default function PokemonDetailPage() {
   const params = useParams();
-  const id: any = params.id;
+  const id = params.id as string;
   const [pokemon, setPokemon] = useState<PokemonDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
