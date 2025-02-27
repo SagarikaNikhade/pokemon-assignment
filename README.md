@@ -1,4 +1,4 @@
-# Pokédex App  
+# Pokemon App  
 
 A Next.js application that displays a list of Pokémon using the [PokeAPI](https://pokeapi.co/). It allows users to:  
 - Browse and search for Pokémon by name.  
